@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+header p {
+  margin: 10px 0 0 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+nav {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+nav a {
+  color: #f3f3f3;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #0077ff;
+}
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 24px;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.project-card p {
+  color: #555;
+}
+footer {
+  text-align: center;
+  padding: 30px 0 10px 0;
+  color: #e4e4e4;
+  background-color: #1f1f1f;
+  font-size: 0.95rem;
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header {
+        padding: 24px 0 12px 0;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    nav {
+        margin-top: 18px;
+    }
+    .container {
+        margin: 20px 0;
+        padding: 0 8px;
+    }
+    .projects {
+        gap: 16px;
+    }
+    .project-card {
+        padding: 14px;
+    }
+    footer {
+        padding: 18px 0 8px 0;
+        font-size: 0.9rem;
+    }
+}
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* Desktop (1025px and up) */
+@media (min-width: 1025px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
